@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>隔离体验调查</title>
   <style>
+    /* credits to Pandoc https://pandoc.org/demos.html and the net ninja https://netninja.dev/ */
     html {
       line-height: 1.5;
       font-family: Georgia, serif;
@@ -148,49 +149,160 @@
     img {
       transform: translateX(-0.8em);
     }
+    .dropdown {
+        border-bottom: 1px solid #dee2e6;
+    }
+    .dropdown .trigger {
+      cursor: pointer;
+      position: relative;
+    }
+    
+    .dropdown .trigger p:first-child::after {
+      content: ">";
+      font-weight: bold;
+      position: absolute;
+      right: 15px;
+      transform: rotate(90deg) scale(0.5, 1);
+      transition: transform 0.3s;
+    }
+    .dropdown .trigger.active p:first-child::after {
+      transform: rotate(-90deg) scale(0.5, 1);
+    }
+    .dropdown .content{
+      display: none;
+    }
+    .dropdown .content.active{
+      display: block;
+    }
+      
+    .tabs > ul{
+      padding: 0;
+    }
+    .tabs .trigger{
+      list-style-type: none;
+      margin: 4px;
+      border-radius: 6px;
+      display: inline-block;
+      padding: 5px 10px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+    }
+    .tabs .trigger.active{
+      background: #f2f2f2;
+    }
+    .tabs .content{
+      background: #fbfbfb;
+      padding: 10px 20px;
+      border-radius: 6px;
+      display: none;
+    }
+    .tabs .content.active{
+      display: block;
+    }
   </style>
 </head>
 <body>
 <header id="title-block-header">
 <h1 class="title">隔离体验调查</h1>
 </header>
+<div class="dropdown">
+<div class="trigger">  
 <p><strong>初衷</strong></p>
-<p>近期在上海佑舍酒店隔离期间遇到了诸多问题，特别是卫生状况堪忧，入住时感觉地面灰尘较多，但一开始并未有太多疑虑而且旅途劳顿只想逃避，心想毕竟防疫酒店肯定对卫生把控有严格的要求和标准而且隔离这件事都存在这么久了，如果有问题也早该暴露被解决了，直到在床单被子枕套上发现多处血迹及头发，彻底动摇了我的信心，让我非常怀疑有没有被更换过以及房间有没有做过全面的清洁打扫和消毒，后来搜索社交媒体（如微博，小红书）了解到佑舍酒店的卫生问题去年六月开始就有被提及和反映甚至投诉，没想到快一年过去了还在重复昨天的故事，我内心是失落和悲观的，不确定接下来一年佑舍酒店的卫生状况能否得到改善。我也深知自己力量微小不知做什么能促成一些改变，但还是想尽些绵薄之力，想发起一个隔离体验调查向大家征集更多线索和情报并集思广益以期待社会各界的参与共同监督隔离酒店，希望每个人都健康平安有愉快的隔离回忆。</p>
+</div>
+<div class="content">
+<p>近期在上海松江区佑舍酒店隔离期间遇到了诸多问题，特别是卫生状况堪忧，入住时感觉地面灰尘较多，但一开始并未有太多疑虑而且旅途劳顿只想逃避，心想毕竟防疫酒店肯定对卫生把控有严格的要求和标准而且隔离这件事都存在这么久了，如果有问题也早该暴露被解决了，直到在床单被子枕套上发现多处血迹及头发，彻底动摇了我的信心，让我非常怀疑有没有被更换过以及房间有没有做过全面的清洁打扫和消毒，后来搜索社交媒体（如微博，小红书）了解到佑舍酒店的卫生问题去年六月开始就有被提及和反映甚至投诉，没想到快一年过去了还在重复昨天的故事，我内心是失落和悲观的，不确定接下来一年佑舍酒店的卫生状况能否得到改善。我也深知自己力量微小不知做什么能促成一些改变，但还是想尽些绵薄之力，想发起一个隔离体验调查向大家征集更多线索和情报并集思广益以期待社会各界的参与共同监督隔离酒店，希望每个人都健康平安有愉快的隔离回忆。</p>
+</div>
+</div>
+<div class="dropdown">
+<div class="trigger"> 
 <p><strong>我对于佑舍的困惑</strong></p>
-<p>大体来说，除了床单不能接受之外，其实一般卫生问题或者设施陈旧质量问题我都能忍受不提也罢（当然如果事实是房间确实没有做过符合标准的清洁和消毒，也是严重的问题，我目前并无证据）但我也很困惑，300/天的房费却换不来最基本的住宿卫生保障。</p>
+</div>
+<div class="content">
+<p>大体来说，除了床单不能接受之外，其实一般卫生问题或者设施陈旧质量问题我都能忍受不提也罢（当然如果事实是房间确实没有做过符合标准的清洁和消毒，也是严重的问题，我目前并无证据）但我也很困惑，300/天的房费却换不来最基本的住宿卫生保障。况且平时酒店每天都有客房打扫，隔离点是每个隔离周期结束之后才打扫，频率低了，反倒更敷衍了。</p>
 <p>另外，这个隔离点也有点奇怪，整个楼很陈旧，大厅像是还在装修没有完工的施工现场，电梯和楼道都布满了灰尘，但工作人员则告知我们这是新的酒店，去年成为隔离点前都还没对外营业过，总之，这个隔离点都存在很久了一切看起来还像是有点没准备好就匆忙投入使用的状态。</p>
 <p>入住手续也有些令人困惑，下车之后工作人员就给每个人发了房卡，之后二十人挤在并不宽敞的大厅签字填表然后再扫码打开小程序填另一份表格然后再扫码付费，但其实这个过程完全可以在自己的房间完成，大厅不仅空间不足远远达不到社交距离而且网络信号微弱，不太理解为什么需要让大家挤在一起找wifi用自己的手机在小程序上填表。流程不规范让人困惑还体现在酒店大厅里只有一个简单的桌子，也没有看到有电脑设备录入个人信息，是工作人员在用手机给每个人护照拍照，而且是被要求扫一个并不是防疫或政府部门官方的二维码填一个“Kevin分享”的腾讯文档，因为所填写的内容涉及个人敏感信息包括护照户籍等，我觉得有很大的隐私泄露隐患，这些护照照片及个人信息不应该保存在工作人员个人手机及工作人员自建的腾讯文档上。</p>
-<p>入住之后的沟通方式也令人困惑，工作人员让大家进入一个微信群，我本来以为这是方便大家沟通的方式而非必须，因为正常酒店入住之后住客肯定不是和酒店通过微信群沟通，前台还至少应该承载必须的沟通职能，不过我每次拨0致电前台，得到的答复总是我只是值班室值班的，让我自己在群里联系或者打工作人员手机号码。</p>
-<p>酒店和防疫工作人员/志愿者的关系我也很困惑，我也不知道在隔离点和我们沟通的所有穿隔离服的工作人员到底是酒店方负责人还是志愿者，我被隔离点的一位工作人员告知这里的情况是酒店被征用作为隔离点之后酒店方人员撤出，所有事务都是由没有工资的志愿者在负责。这导致的状况是酒店即便很多问题，我能想象大家可能内心也会跟我有相似的声音对自己说就是总不能麻烦辛苦工作的志愿者，这些问题自己忍忍就罢了。但隔离费用收据上写的还是上海佑舍酒店，我不解的是酒店方是不是也应该承担卫生保障和服务的职责，我也不知道隔离之下还受不受消费者权益保护法或者什么条例的保护，到底谁来负责解决隔离点存在的问题，一个个谜团我实在是琢磨不透的。</p>
-<p>我想强调的是我的困惑来源于卫生状况的不堪和流程上的不足，大部分工作人员都很友善耐心，我对每个工作人员的辛苦付出都心存感激。有个别工作人员与我沟通时态度恶劣嚣张出言不逊甚至有恐吓性质的言辞诸如“你爱住不住”“我到时不给你开解除隔离证明”，这部分故事我觉得不是重点而且他态度后来有所缓和，我就先不展开介绍。</p>
-<p>卫生方面：</p>
-<ol type="1">
-<li>床单被子枕套多处血迹及头发</li>
-<li>地面灰尘很多</li>
-<li>有同行的住客反映房间里有前面住客留下的物品和垃圾</li>
-</ol>
-<p>设施方面：</p>
-<ol type="1">
-<li>淋浴一段时间无论如何调整开关转向只有滚烫的热水 但后来有修复</li>
-<li>床头的木板是开裂的 清晰可见木板和墙壁之间裸露的电线</li>
-<li>很多墙上的插座都无法使用 就是明显比较劣质插头甚至无法插入</li>
-</ol>
-<p>流程方面：</p>
-<ol type="1">
-<li>入住流程不是很规范，工作人员用手机给每个人的护照拍照，现场只有一张简单的桌子，没有看到有如正常酒店的电脑设备来采集信息</li>
-<li>有隐私泄露隐患，上面已经提到护照资料并不是通过正常的电脑设备扫描录入系统，并且大家被要求各自用手机在非官方小程序上打开“Kevin分享”的腾讯文档填写个人信息包括护照户籍等</li>
-<li>若是需要大家自己用手机填表，也没必要让大家挤在空间不足网络不佳的大厅里完成，完全可以让大家各自进到房间再操作进行信息补全</li>
-</ol>
-<p>责任划分不明确：</p>
-<ol type="1">
-<li>很不解到底隔离点是酒店方工作人员在提供卫生服务保障还是防疫志愿者 隔离点似乎只有志愿者 志愿者也告诉我没有酒店方人员是志愿者在负责 但房费付给了酒店 不知道为什么酒店本身没有自己的工作人员在负责</li>
-</ol>
+<p>入住之后的沟通方式也令人困惑，工作人员让大家进入一个微信群，我本来以为这是方便大家沟通的方式而非必须，因为正常酒店入住之后住客肯定不是和酒店通过微信群沟通，前台还至少应该承载必须的沟通职能，不过我每次房间座机拨0致电前台，得到的答复总是我只是值班室值班的，让我自己在群里联系或者打工作人员手机号码。</p>
+<p>酒店和防疫工作人员/志愿者的关系我也很困惑，我也不知道在隔离点和我们沟通的所有穿隔离服的工作人员到底是酒店方负责人还是志愿者，我被隔离点的一位工作人员告知这里的情况是酒店被征用作为隔离点之后酒店方人员撤出，所有事务都是由没有工资的志愿者在负责。这导致的状况是酒店即便很多问题，我能想象大家可能内心也会跟我有相似的声音对自己说就是总不能麻烦辛苦工作的志愿者，这些问题自己忍忍就罢了。但隔离费用收款方似乎还是上海佑舍酒店，我不解的是酒店方是不是也应该承担卫生保障和服务的职责，我也不知道隔离之下还受不受消费者权益保护法或者什么条例的保护，到底谁来负责解决隔离点存在的问题，一个个谜团我实在是琢磨不透的。</p>
+<p>我想强调的是我的困惑来源于卫生状况的不堪和流程上的不足，大部分工作人员都很友善耐心，我对每个工作人员的辛苦付出都心存感激。有个别工作人员与我沟通时态度恶劣嚣张出言不逊甚至有恐吓性质的言辞诸如“你爱住不住，不住下楼，还有别人要住”“我到时不给你开解除隔离证明”，这部分故事我觉得不是重点而且他态度后来有所缓和，我就先不展开介绍。</p>
+<div class="tabs">
+    <ul>
+      <li class="trigger active" data-target="#卫生">卫生</li>
+      <li class="trigger" data-target="#设施">设施</li>
+      <li class="trigger" data-target="#流程">流程</li>
+      <li class="trigger" data-target="#责任">责任划分</li>
+    </ul>
+    <div id="卫生" class="content active">
+        <ul>
+            <li>床单被子枕套多处血迹及头发</li>
+            <li>地面灰尘很多</li>
+            <li>有同行的住客反映房间里有前面住客留下的物品和垃圾</li>
+        </ul>
+    </div>
+    <div id="设施" class="content">
+        <ul>
+            <li>淋浴一段时间无论如何调整开关转向只有滚烫的热水 但后来有修复</li>
+            <li>床头的木板是开裂的 清晰可见木板和墙壁之间裸露的电线</li>
+            <li>很多墙上的插座都无法使用 就是明显比较劣质插头甚至无法插入</li>
+        </ul>
+    </div>
+    <div id="流程" class="content">
+        <ul>
+            <li>入住流程不是很规范，工作人员用手机给每个人的护照拍照，现场只有一张简单的桌子，没有看到有如正常酒店的电脑设备来采集信息</li>
+            <li>有隐私泄露隐患，上面已经提到护照资料并不是通过正常的电脑设备扫描录入系统，并且大家被要求各自用手机在非官方小程序上打开“Kevin分享”的腾讯文档填写个人信息包括护照户籍等</li>
+            <li>若是需要大家自己用手机填表，也没必要让大家挤在空间不足网络不佳的大厅里完成，完全可以让大家各自进到房间再操作进行信息补全</li>
+        </ul>
+    </div>
+    <div id="责任" class="content">
+       <ul>
+        <li>很不解到底隔离点是酒店方工作人员在提供卫生服务保障还是防疫志愿者 隔离点似乎只有志愿者 志愿者也告诉我没有酒店方人员是志愿者在负责 但房费付给了酒店 不知道为什么酒店本身没有自己的工作人员在负责</li>
+       </ul>
+    </div>
+</div>
+</div>
+</div>
 <p><strong>您的声音</strong></p>
 <p>如果您想分享隔离体验经历</p>
 <p>请您填写这份匿名调查问卷</p>
 <p>📎<strong><a href="https://airtable.com/shr4NbsgEFmH9dZZP?prefill_%E5%9C%B0%E7%82%B9=%E4%B8%8A%E6%B5%B7&amp;prefill_%E9%85%92%E5%BA%97%E5%90%8D%E7%A7%B0=%E4%B8%8A%E6%B5%B7%E4%BD%91%E8%88%8D&amp;prefill_%E5%A4%A9%E6%95%B0=3&amp;prefill_%E8%B4%B9%E7%94%A8=%E6%88%BF%E8%B4%B9310(%E5%A4%A9)+%E9%A4%90%E8%B4%B980(%E5%A4%A9)">隔离体验反馈</a></strong></p>
 <p>征集到的信息之后会定期更新总结在这里</p>
 <p>非常感谢 如有任何疑问与建议 也欢迎来信</p>
+<p>2021.05</p>
 <img src='img/info.jpg'>
+<script>
+    // credits the net ninja https://netninja.dev/
+    let dropdowns = document.querySelectorAll('.dropdown');
+    dropdowns.forEach( dropdown => {
+        let trigger = dropdown.querySelector('.trigger');
+        let content = dropdown.querySelector('.content');
+        trigger.addEventListener('click', () => {
+            trigger.classList.toggle('active');
+            content.classList.toggle('active');
+        });
+    });
+    let tabs = document.querySelectorAll('.tabs .trigger');
+    let content = document.querySelectorAll('.tabs .content');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', (e) => {
+            toggleTabs(e);
+            toggleContent(e);
+        })
+    });
+
+    let toggleTabs = (e) => {    
+        tabs.forEach(tab => {
+            tab.classList.remove('active');
+        });
+        e.target.classList.add('active');
+    };
+
+    let toggleContent = (e) => {
+        content.forEach(item => {
+            item.classList.remove('active');
+        });
+        const selector = e.target.getAttribute('data-target');
+        const target = document.querySelector(selector);
+        target.classList.add('active');
+    };
+    </script>
 </body>
 </html>
